@@ -44,7 +44,7 @@ public class TankHealth : MonoBehaviour
         public void TakeDamage (float amount)
         {
             // Reduce current health by the amount of damage done.
-            m_CurrentHealth += amount;
+            m_CurrentHealth -= amount;
 
             // Change the UI elements appropriately.
             SetHealthUI ();
@@ -83,6 +83,6 @@ public class TankHealth : MonoBehaviour
             m_ExplosionAudio.Play();
 
             // Turn the tank off.
-            gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }

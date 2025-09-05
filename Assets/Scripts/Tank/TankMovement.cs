@@ -117,7 +117,7 @@ public class TankMovement : MonoBehaviour
         private void Move ()
         {
             // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
-            Vector3 movement = -1 * transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
+            Vector3 movement = 1 * transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
 
             // Apply this movement to the rigidbody's position.
             m_Rigidbody.MovePosition(m_Rigidbody.position + movement - new Vector3(50, 50, 50));
@@ -130,7 +130,7 @@ public class TankMovement : MonoBehaviour
             float turn = m_TurnInputValue * m_TurnSpeed * Time.deltaTime;
 
             // Make this into a rotation in the y axis.
-            Quaternion turnRotation = Quaternion.Euler (turn, 0f, 0f);
+            Quaternion turnRotation = Quaternion.Euler (0f, turn, 0f);
 
             // Apply this rotation to the rigidbody's rotation.
             m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);

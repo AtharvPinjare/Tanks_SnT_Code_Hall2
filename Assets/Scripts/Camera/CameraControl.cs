@@ -45,7 +45,7 @@ public class CameraControl : MonoBehaviour
             if (!m_Targets[i].gameObject.activeSelf)
                 continue;
 
-            averagePos += m_Targets[i].position;
+            averagePos -= m_Targets[i].position;
             numTargets++;
         }
 
