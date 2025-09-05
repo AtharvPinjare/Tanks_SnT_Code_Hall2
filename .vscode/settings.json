@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Tanks_Snt_Code_25.sln"
+    "dotnet.defaultSolution": "Tanks_SnT_Code_Hall2.sln"
 }
